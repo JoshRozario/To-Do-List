@@ -1,5 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This is under development To-Do list app built using Node.js, React and Electron
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
+This is an under development To-Do list app built using Node.js, React and Electron
 
 ## Available Scripts
 
