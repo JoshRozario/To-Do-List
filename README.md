@@ -5,7 +5,7 @@ This is an under development To-Do list app built using Node.js, React and Elect
 
 In the project directory, you can run:
 
-### `npm run dev'
+### `npm run dev`
 
 Runs the app in the development mode.<br>
 The page will reload if you make edits.<br>
