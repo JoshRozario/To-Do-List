@@ -10,9 +10,9 @@ export default class AddTodo extends Component {
         e.preventDefault();
         if(this.state.title !== ''){
             this.props.addTodo(this.state.title);
-            document.getElementById('form').placeholder = "Add a task...";
+            document.getElementById('form').placeholder = "   Add a task...";
         }else{
-            document.getElementById('form').placeholder = "Please enter a task";
+            document.getElementById('form').placeholder = "   Please enter a task";
         }
         this.setState({title : ''});    
     }
@@ -27,8 +27,7 @@ export default class AddTodo extends Component {
                 id = 'form'
                 type = "text"
                 name = "title"
-                style = {{flex : '10'}}
-                placeholder= "Add a task..."
+                placeholder= "   Add a task..."
                 className = "form"
                 value = {this.state.title}
                 onChange = {this.onChange}

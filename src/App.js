@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Header from './components/layout/Header'
-	
+  
 import {BrowserRouter as Router,Route } from 'react-router-dom'
 
 import Todos from './components/Todos';
 import './App.css';
 import AddTodo from './components/AddTodo';
 import About from './components/pages/About';
-import uuid from 'uuid'
-
+import uuid from 'uuid';
 
 
 
@@ -48,10 +47,14 @@ class App extends Component {
 
 
   addTodo = (title) =>{
+    var now = new Date();
+    var date = now.getHours() + ":" + now.getMinutes() + " " + now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear();
     const newTodo = {
       id: uuid.v4(),
       title,
-      completed: false
+      completed: false,
+      date: date,
+      storage: now
     }
     this.setState({todos: [...this.state.todos, newTodo]})
   }
@@ -72,7 +75,7 @@ class App extends Component {
       <Router>
         <div className="App" style = {borderStyle} >
           <div className = "container">
-            <Header/>
+            <Header todos ={this.state.todos} />
             <Route exact path = "/" render = {props => (
               <React.Fragment>
                 <Todos todos = {this.state.todos} markComplete={this.markComplete} delTodo = {this.delTodo}/>

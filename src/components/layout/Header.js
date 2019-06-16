@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { Component }  from 'react';
+import PropTypes from 'prop-types';
 
-function Header(){
-    return (
-        <header style = {headerStyle}>   
-            <h1>To-Do List </h1>
-        </header>
-    )
+class Header extends Component {
+
+    
+    render(){
+        //console.log(this.props.todos);
+        let stats = count(this.props.todos);
+        return (
+            <header style = {headerStyle}>   
+                <h1>To-Do List</h1>
+                <p className = "counter" >{stats} </p>
+            </header>
+            
+        )
+    }
 }
+
+function count(list){
+    let counter = 0;
+    let total = 0;
+    list.forEach(element => {
+        if(element.completed === true){
+            counter++;
+        }
+        total++;
+    });
+    let string = (counter + "/" + total + " completed");
+    if (string === "0/0 completed"){
+        string = '';
+    }
+    return string;
+
+}
+
+// PropTypes
+Header.propTypes = {
+    todos: PropTypes.array.isRequired
+  }
 
 const headerStyle = {
     background: '#ff1452',

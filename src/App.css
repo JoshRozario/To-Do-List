@@ -24,15 +24,19 @@ a{
   
 }
 
+.counter{
+  text-align: right;
+}
 
 .form{
   border: none  ;
-  padding: 5px;
-  border-bottom-left-radius: 15px
+  padding: 10px;
+  border-bottom-left-radius: 15px;
+  width: 80%;
 }
 
-form:active, form:focus {
-  outline: 0;
+.form:active, .form:focus {
+  outline: none;
   border: none;
   box-shadow: none!important;
 }
@@ -51,7 +55,7 @@ form:active, form:focus {
   background: #087a6c;
 }
 
-.task {
+.task ,.taskDate{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -60,3 +64,11 @@ form:active, form:focus {
   user-select: none;
   text-align: center;
 }
+
+
+
+.taskDate{
+  font-size: 10px ;
+  color: rgba(63, 63, 63, 0.76)
+}
+

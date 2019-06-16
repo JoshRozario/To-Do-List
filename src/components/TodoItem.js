@@ -16,15 +16,12 @@ export class TodoItem extends Component {
 
 
   render() {
-    const { id, title } = this.props.todo;
-    console.log(localStorage);
+    const { id, title,date } = this.props.todo;
     return (
       <div style={this.getStyle()} >
-        <p className = 'task' onClick = {this.props.markComplete.bind(this,id)}>
-          
-          {title}
-          
-        </p>
+        <div className = 'task' onClick = {this.props.markComplete.bind(this,id)}> 
+          {title} <p className = 'taskDate'> {date}</p>
+        </div>
         <button onClick = {this.props.delTodo.bind(this, id)} style = {btnStyle}>-</button>
       </div>
     )
@@ -44,7 +41,7 @@ const btnStyle = {
   borderRadius: '30%',
   cursor: 'pointer',
   float: 'right',
-  marginTop : '-24px'
+  marginTop : '-31px'
 }
 
 
