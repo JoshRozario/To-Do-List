@@ -22,7 +22,11 @@ export default class AddTodo extends Component {
 
     render() {
         return (
-        <form onSubmit = {this.onSubmit} style = {{display: 'flex'}}>
+        <form onSubmit = {this.onSubmit} style = {{
+            display: 'flex',
+            position: 'sticky',
+            bottom: '0'
+            }}>
             <input
                 id = 'form'
                 type = "text"
@@ -30,13 +34,17 @@ export default class AddTodo extends Component {
                 placeholder= "   Add a task..."
                 className = "form"
                 value = {this.state.title}
-                onChange = {this.onChange}
+                onChange = {this.onChange}  
             />
             <input
                 type = "submit"
                 value = "Submit"
                 className="btn"
-                style = {{flex : '1'}}
+                style = {{
+                    flex : '10',
+                    position: 'sticky',
+                    bottom: '0',
+                }}
                 />
         </form>
         )

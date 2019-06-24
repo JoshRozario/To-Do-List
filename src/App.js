@@ -95,7 +95,6 @@ const borderStyle = {
   borderRadius: "25px",
   backGround: "#73AD21",
   height: "300px"
-  
 }
 
 

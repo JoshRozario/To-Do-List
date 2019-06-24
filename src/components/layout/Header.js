@@ -40,6 +40,8 @@ Header.propTypes = {
   }
 
 const headerStyle = {
+    position: 'sticky',
+    top: '0',
     background: '#ff1452',
     color: '#fff',
     textAlign: 'center',

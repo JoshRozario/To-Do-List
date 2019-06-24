@@ -15,6 +15,7 @@ const startUrl = process.env.ELECTRON_START_URL || url.format({
 
 function createWindow() {
     mainWindow = new BrowserWindow({transparent: true, frame: false, width:320 , height: 410, icon: iconPath, skipTaskbar: true});
+    mainWindow.setResizable(false)
     mainWindow.loadURL(startUrl);
     tray = new Tray(iconPath);
     var contextMenu = Menu.buildFromTemplate([
